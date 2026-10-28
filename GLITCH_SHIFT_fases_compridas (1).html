@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>GLITCH//SHIFT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="gamebox">
+        <header>
+            <div class="logo">GLITCH<span style="color:#ff6b6b">//</span>SHIFT</div>
+            <div id="hud">
+                <span class="pill">FASE <b id="lv">1</b>/10</span>
+                <span class="pill">BITS <b id="bits">0</b>/3</span>
+                <span class="pill">VIDAS <b id="lives">3</b></span>
+                <span class="pill">SCORE <b id="score">0</b></span>
+            </div>
+            <span class="pill" id="timer-pill">TEMPO <b id="timer">35</b>s</span>
+        </header>
+        <canvas id="game" width="800" height="500"></canvas>
+        <div id="help">A/D ou ← → mover · W/↑/ESPAÇO pular · SHIFT trocar realidade · R reiniciar após GAME OVER · O
+            tempo acabou? Fuja da entidade!</div>
+        <div id="mobile">
+            <div class="pad">
+                <button data-key="ArrowUp">▲</button>
+                <button data-key="ArrowLeft">◀</button>
+                <button data-key="ArrowRight">▶</button>
+            </div>
+            <button id="jump">PULAR</button>
+            <button id="shift">TROCAR<br>REALIDADE</button>
+        </div>
+    </div>
+    <div id="overlay">
+        <div class="menu-mountains"></div>
+        <div class="menu-city"></div>
+        <div class="panel">
+            <h1 id="title">GLITCH<br>///SHIFT</h1>
+            <p id="desc">Alterne entre REAL e GLITCH. Colete 3 bits e encontre a saída.</p>
+            <p id="menuExtra">6 fases · Caso o tempo acabe, ELE vira ate voce.</p>
+            <div id="menuButtons">
+                <button class="menu-action" id="playButton">JOGAR ▶</button>
+                <button class="menu-action secondary" id="controlsButton">CONTROLES</button>
+                <button class="menu-action secondary" id="tutorialButton">TUTORIAL</button>
+                <button class="menu-action secondary" id="exitButton">SAIR</button>
+            </div>
+            <button id="start">CONTINUAR ▶</button>
+            <button id="menuReturn">VOLTAR AO MENU</button>
+            <div class="menu-hint" id="menuHint">Um jogo de plataforma e realidades.</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
